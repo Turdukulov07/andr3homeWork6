@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".ui.MainActivity">
+
+    <EditText
+        android:id="@+id/et_operator_one"
+        android:hint="@string/number_a"
+        style="@style/et_tv_style" />
+
+    <EditText
+        android:id="@+id/et_operator_two"
+        style="@style/et_tv_style"
+        android:hint="@string/number_b" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        style="@style/et_tv_style"
+        android:hint="@string/result" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/btn_add"
+            android:text="@string/add"
+            app:layout_constraintEnd_toStartOf="@+id/btn_divide"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/btn_style"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_divide"
+            style="@style/btn_style"
+            android:text="@string/divide"
+            app:layout_constraintEnd_toStartOf="@+id/btn_multiply"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_add"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_multiply"
+            style="@style/btn_style"
+            android:text="@string/multiply"
+            app:layout_constraintEnd_toStartOf="@+id/btn_subtract"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_divide"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_subtract"
+            style="@style/btn_style"
+            android:text="@string/subtract"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_multiply"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/btn_pow"
+            style="@style/btn_style"
+            android:text="@string/pow"
+            app:layout_constraintEnd_toEndOf="@+id/btn_divide"
+            app:layout_constraintTop_toBottomOf="@id/btn_divide" />
+
+        <Button
+            android:id="@+id/btn_sqrt"
+            style="@style/btn_style"
+            android:text="@string/radical"
+            app:layout_constraintStart_toStartOf="@+id/btn_multiply"
+            app:layout_constraintTop_toBottomOf="@+id/btn_multiply" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
